@@ -1,0 +1,5 @@
+import type { PortfolioItem } from "@/lib/portfolio";
+export function PortfolioGrid({items,emptyLabel}:{items:PortfolioItem[];emptyLabel:string}) {
+ if(!items.length) return <p className="wrap pb-24 text-sm text-black/45">{emptyLabel}</p>;
+ return <section className="wrap grid gap-7 pb-24 md:grid-cols-2">{items.map((item,i)=><article key={item.id} className={i%2===1?"md:mt-20":""}>{item.image_url ? <img src={item.image_url} alt={item.title} className="h-[390px] w-full object-cover md:h-[440px]" loading="lazy"/> : <div className="image-panel h-[390px] md:h-[440px]"><span>{item.title}</span></div>}<div className="mt-5 flex gap-5"><span className="eyebrow text-[#6B2638]">{item.category || item.year || String(i+1).padStart(2,"0")}</span><div><h2 className="serif text-3xl">{item.title}</h2><p className="mt-2 whitespace-pre-line text-sm leading-7 text-black/55">{item.description}</p>{item.client && <p className="mt-2 text-xs text-black/40">With {item.client}</p>}</div></div></article>)}</section>;
+}
