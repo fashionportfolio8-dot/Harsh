@@ -19,9 +19,19 @@ Luxury editorial portfolio for an Indo-Western fashion designer, built with Next
 - Material Archive
 - Contact
 
+## Supabase contact form setup
+
+1. Create a Supabase project at https://supabase.com.
+2. In the Supabase dashboard, open SQL Editor and run `supabase/migrations/202611260001_create_contact_messages.sql`.
+3. In Project Settings → API, copy the Project URL and the publishable/anon key.
+4. Add them to your hosting provider as `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`. For local development, copy `.env.example` to `.env.local` and fill in those values.
+5. Redeploy the website and submit a test message. View submissions in Table Editor → contact_messages.
+
+Only the public publishable/anon key belongs in the browser. Never put a Supabase service-role key in a `NEXT_PUBLIC_*` variable or commit it to GitHub. Row-level security allows public inserts only; visitors cannot read submitted messages through the website.
+
 ## Before publishing
 
-The colour panels are intentional placeholders, not real portfolio photography. Replace them with approved fashion images and update the sample biography, project descriptions, contact email and social links. The contact form is a frontend demo and is not connected to email or a database yet.
+The colour panels are intentional placeholders, not real portfolio photography. Replace them with approved fashion images and update the sample biography, project descriptions, contact email and social links. The contact form saves messages to Supabase after the Supabase project and environment variables are configured.
 
 ## Brand direction
 
