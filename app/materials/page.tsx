@@ -1,2 +1,4 @@
-import {PageIntro,Placeholder} from "@/components/sections";
-export default function Materials(){return <main><PageIntro kicker="06 / Material archive" title="The beauty is in the detail." copy="A tactile archive of textiles, colour, surface and craft. A place for the materials that shape each design story."/><section className="wrap grid gap-5 pb-24 md:grid-cols-3">{["Textile / weave","Surface / embroidery","Colour / natural tones","Texture / hand feel","Craft / process","Material / movement"].map((x,i)=><article key={x}><Placeholder label={x} className="h-[270px]"/><p className="eyebrow mt-4 text-[#6B2638]">Archive 0{i+1}</p><h2 className="serif mt-2 text-2xl">{x}</h2></article>)}</section></main>}
+import { PageIntro } from "@/components/sections";
+import { PortfolioGrid } from "@/components/portfolio-grid";
+import { getPortfolioItems } from "@/lib/portfolio";
+export default async function Materials(){const items=await getPortfolioItems("material");return <main><PageIntro kicker="06 / Material archive" title="The beauty is in the detail." copy="A tactile archive of textiles, colour, surface and craft. A place for the materials that shape each design story."/><PortfolioGrid items={items} emptyLabel="Your published materials and textile studies will appear here."/></main>}
