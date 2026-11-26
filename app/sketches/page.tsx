@@ -1,0 +1,2 @@
+import {PageIntro,Placeholder} from "@/components/sections";
+export default function Sketches(){return <main><PageIntro kicker="05 / The process" title="From first line to final form." copy="An open notebook of silhouettes, garment studies and visual experiments."/><section className="wrap grid grid-cols-2 gap-4 pb-24 md:grid-cols-3">{["Silhouette study","Draping notes","Embellishment study","Form exploration","Detail drawing","Collection direction"].map((x,i)=><Placeholder key={x} label={x} className={"h-[240px] md:h-[330px] "+(i%3===1?"mt-12":"")}/>)}</section></main>}
