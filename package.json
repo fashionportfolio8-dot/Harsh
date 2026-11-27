@@ -1,28 +1,8 @@
 {
-  "name": "harsh-fashion-portfolio",
-  "version": "1.0.0",
+  "name": "arshu-designer-portfolio",
+  "version": "2.0.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.0.0",
-    "lucide-react": "^0.468.0",
-    "next": "^15.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "@supabase/supabase-js": "^2.57.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^4.0.0",
-    "typescript": "^5.7.2",
-    "@types/node": "^22.10.2",
-    "@types/react": "^19.0.3",
-    "@types/react-dom": "^19.0.2"
-  }
+  "scripts": {"dev":"next dev","build":"next build","start":"next start","lint":"eslint ."},
+  "dependencies": {"@react-three/drei":"latest","@react-three/fiber":"latest","@supabase/supabase-js":"^2.57.0","framer-motion":"latest","lucide-react":"^0.468.0","next":"^15.1.0","react":"^19.0.0","react-dom":"^19.0.0","three":"latest"},
+  "devDependencies": {"@tailwindcss/postcss":"^4.0.0","@types/node":"^22.10.2","@types/react":"^19.0.3","@types/react-dom":"^19.0.2","@types/three":"latest","autoprefixer":"^10.4.20","eslint":"latest","tailwindcss":"^4.0.0","typescript":"^5.7.2"}
 }
